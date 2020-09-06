@@ -10,7 +10,9 @@
   "author": "Luiz Antonio S. de Oliveira",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "express": "^4.17.1",
-    "mongoose": "^5.10.3"
+    "mongoose": "^5.10.3",
+    "mongoose-type-email": "^1.0.12"
   }
 }

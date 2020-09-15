@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Login from './views/Login';
+import Home from './views/Home';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Switch>
+      <Route path="/" component={Login} exact />
+      <Route path="/home" component={Home} exact />
+    </Switch>
+  </BrowserRouter>,
   document.getElementById('root')
 );

@@ -1,22 +1,27 @@
 import React from 'react';
-import Header from '../../components/Header';
+import Navbar from '../../components/Navbar';
 import * as S from './styles'
 import Filter from '../../components/Filter';
 import CardUser from '../../components/CardUser';
 
 function Home() {
     return (
-        <>
-            <Header />
+        <div>
+            <Navbar />
             <S.FilterArea>
                 <Filter title="Todos" />
                 <Filter title="Ação" />
-                <Filter title="Aventura" />
-                <Filter title="RPG" />
-                <Filter title="Esporte" />
+                <Filter title="Luta" />
+                <Filter title="Futebol" />
                 <Filter title="Corrida" />
-                <Filter title="Simulação" />
+                <Filter title="FPS" />
             </S.FilterArea>
+
+            <S.Title>
+                <h5>
+                    Jogadores encontrados
+                </h5>
+            </S.Title>
 
             <S.Content>
                 <CardUser />
@@ -24,11 +29,8 @@ function Home() {
                 <CardUser />
                 <CardUser />
                 <CardUser />
-                <CardUser />
-                <CardUser />
-                <CardUser />
             </S.Content>
-        </>
+        </div>
     );
 }
 

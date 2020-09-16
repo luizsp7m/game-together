@@ -4,32 +4,31 @@ export const FilterArea = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
     flex-wrap: wrap;
+    margin: 16px 0px 8px 0px;
 `
 
 export const Title = styled.div`
-    width: 90%;
     display: flex;
-    margin: 0 auto;
     justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    width: 95%;
+    margin: 0 auto;
 
-    border-bottom: 1px solid var(--secondary);
-    margin-bottom: 20px;
-
-    h4 {
-        color: var(--secondary);
+    h5 {
         position: relative;
-        top: 10px;
+        top: 8px;
         background-color: #f0f0f5;
-        padding: 0 10px;
+        padding: 0 12px;
+        color: var(--dark);
     }
 `
 
 export const Content = styled.div`
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 10px;
 `

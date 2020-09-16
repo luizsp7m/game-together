@@ -1,45 +1,44 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    background-color: var(--secondary);
-    margin: 0 7px 14px 7px;
-    padding: 10px;
-    border-radius: 3px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-
-    width: 250px;
+    padding: 10px;
+    background-color: #0a3d62;
+    width: 175px;
+    margin: 0 5px 10px 5px;
+    border-radius: 2px;
 
     img {
-        height: 100px;
         border-radius: 50%;
-        background-size: cover;
-        background-position: center;
-        border: 4px solid #fff;
+        height: 100px;
+        margin-bottom: 15px;
     }
 
     h4 {
+        margin-bottom: 10px;
         color: #fff;
-        margin-top: 10px;
+        font-size: .9rem;
     }
 
     button {
-        margin-top: 10px;
-        padding: 10px 25px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
         width: 100%;
+        height: 36px;
+        padding: 10px;
         border: none;
-        background-color: var(--primary);
+        background-color: var(--danger);
         color: #fff;
         font-weight: bold;
         cursor: pointer;
-        font-size: 15px;
         outline: none;
 
         &:hover {
-            opacity: .75;
+            opacity: .85;
         }
     }
 `

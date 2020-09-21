@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import SignIn from './views/SignIn';
 import SignUp from './views/SignUp';
 import Home from './views/Home';
+
 ReactDOM.render(
   <BrowserRouter>
     <Switch>

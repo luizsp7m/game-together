@@ -7,7 +7,7 @@ export const Navbar = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 2px 2px 4px rgba(0,0,0,.2);
+    box-shadow: 2px 1px 2px rgba(0,0,0,.2);
 
     @media (max-width: 768px) {
         display: flex;
@@ -18,7 +18,11 @@ export const Navbar = styled.nav`
 
 export const Left = styled.div`
     padding-left: 100px;
-    color: var(--dark);
+
+    h4 {
+        color: var(--dark);
+        cursor: pointer;
+    }
 `
 
 export const Right = styled.div`
@@ -27,16 +31,21 @@ export const Right = styled.div`
     button {
         border: none;
         padding: 13px 25px;
-        background-color: var(--danger);
+        background-color: var(--primary);
         color: var(--white);
         font-weight: bold;
         cursor: pointer;
         outline: none;
 
+        &:hover {
+            opacity: .8;
+        }
+
         @media (max-width: 768px) {
-            background-color: var(--danger);
+            background-color: var(--primary);
             color: var(--white);
             position: fixed;
+            z-index: 10;
             left: 0;
             right: 0;
             bottom: 0;
@@ -48,9 +57,11 @@ export const Right = styled.div`
     }
 
     .logout {
-        background-color: var(--light);
+        border: 1px solid rgba(0,0,0, .1);
         color: var(--danger);
         margin-left: 15px;
+        padding: 12px 13px;
+        background-color: var(--white);
 
         @media (max-width: 768px) {
             display: none;

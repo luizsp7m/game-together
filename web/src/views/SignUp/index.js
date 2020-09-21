@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as S from './styles'
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
 function SignUp() {

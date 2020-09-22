@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import * as S from './styles'
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import api from '../../services/api';
 
 function SignUp() {
+
+  const [redirect, setRedirect] = useState(false);
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -17,13 +19,15 @@ function SignUp() {
     await api.post('/user', {
       email, password, name
     }).then(() => {
-        alert('OK');
+        alert('Conta criada!');
+        setRedirect(true);
       }
     );
   }
 
   return (
     <S.Container>
+      { redirect && <Redirect to="/signin" /> }
       <S.Sign>
         <h1>Criar conta</h1>
         <input type="text" placeholder="Nome" onChange={e => setName(e.target.value)} required />

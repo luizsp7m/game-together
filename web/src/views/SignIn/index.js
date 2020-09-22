@@ -12,7 +12,7 @@ function SignIn() {
     if(!email) return alert("O campo email está vázio");
     else if(!password) return alert("O campo senha está vázio");
     
-    await api.post('/user/login', {
+    await api.post('/user/signin', {
       email, password
     }).then((success) => {
       console.log(success);
@@ -29,7 +29,7 @@ function SignIn() {
         <input type="password" placeholder="Senha" onChange={e => setPassword(e.target.value) } required />
         <button onClick={Login}>Entrar</button>
         <Link to="/signup">
-          Já possui uma conta?
+          Não possui uma conta?
         </Link>
       </S.Sign>
     </S.Container>

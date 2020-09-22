@@ -23,10 +23,6 @@ UserSchema.pre('save', async function encrypt() {
     this.password = await bcrypt.hash(this.password, 8);
 });
 
-UserSchema.pre('updateOne', async function encrypt() {
-    this.password = await bcrypt.hash(this.password, 8);
-});
-
 UserSchema.pre('save', async function avatar() {
     const num = Math.floor(Math.random() * 1000);
     this.avatar = `https://api.adorable.io/avatars/285/${num}.png`;
